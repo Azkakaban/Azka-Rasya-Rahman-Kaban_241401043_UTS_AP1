@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+main(){
+    system("cls");
+
+    string nama, nim;
+    int nilai1, nilai2, nilai3;
+    float rata;
+
+    cout<<"Nama Mahasiswa : "; cin >>nama;
+    cout<<"NIM : "; cin>>nim;
+    cout<<"Nilai Mata Kuliah : "<<endl;
+    cout<<"     Algoritma dan Pemrograman : "; cin>>nilai1;
+    cout<<"     Probabilitas dan Statistika : "; cin>>nilai2;
+    cout<<"     Sistem Operasi : "; cin>>nilai3;
+    rata = (nilai1 + nilai2 + nilai3) / (float)3;
+
+    cout<<endl;
+    cout<<"Algoritma dan Pemrograman : ";
+    if (nilai1 >= 60){ cout<<"Lulus."<<endl;}
+    else cout <<"Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+
+    cout<<"Probabilitas dan Statistika : ";
+    if (nilai2 >= 60){ cout<<"Lulus."<<endl;}
+    else cout <<"Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+
+    cout<<"Sistem Operasi : ";
+    if (nilai3 >= 60){ cout<<"Lulus."<<endl;}
+    else cout <<"Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+
+    cout<<fixed<<setprecision(2);
+    cout<<"Nilai Rata-rata Semester ini : "<<rata<<endl;
+}
