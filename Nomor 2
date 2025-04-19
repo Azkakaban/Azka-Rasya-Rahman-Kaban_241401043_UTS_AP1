@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+main(){
+    system("cls");
+
+    string biner;
+    int hasil = 0;
+    int validasi = 1;
+    int pangkat = 1;
+
+    cout<<"Masukkan String Biner : "; cin>>biner;
+
+    for (int i = 0; i <= biner.length() - 1; i++){
+        if (biner[biner.length() - 1 - i] == '1'){
+            for (int j = 1; j <= i; j++){
+                pangkat *= 2;
+            }
+            hasil = hasil + pangkat;
+            pangkat = 1;
+        }
+        if ((biner[i] != '1') & (biner[i] != '0')) validasi = 0;
+    }
+    if (validasi == 1) {cout<<hasil<<endl;}
+    else cout<<"Pesan Rusak"<<endl;
+}
