@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+main(){
+    system("cls");
+
+    float angka;
+    cout<<"Masukkan Angka : "; cin>>angka;
+    
+    while (angka > 1){
+        angka = angka /(float)2;
+    }
+    if (angka != 1){cout<<"bukan";}
+    else cout<<"ya";
+}
