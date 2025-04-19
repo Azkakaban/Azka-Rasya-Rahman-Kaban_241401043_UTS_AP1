@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+main(){
+    system("cls");
+
+    string kalimat;
+    string kalimat_;
+    int jumlah = 0;
+    int i = 0;
+    cout<<"Masukkan Kalimat : "; 
+    getline(cin,kalimat);
+
+    while (i <= kalimat.length()){
+        kalimat_ += toupper(kalimat[i]);
+        i++;
+    }
+    i = 0;
+
+    while (i <= kalimat.length()){
+        if ((kalimat_[i] == 'A') || (kalimat_[i] == 'I') || (kalimat_[i] == 'U') || (kalimat_[i] == 'E') || (kalimat_[i] == 'O')){
+            jumlah++;
+        }
+        i++;
+    }
+
+    if (jumlah != 0){cout<<"Kekuatan Mantra : "<<jumlah<<" Vokal"<<endl;}
+    else cout<<"Mantra Tidak Valid! Tidak Mengandung Vokal."<<endl;
+}
